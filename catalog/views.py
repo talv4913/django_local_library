@@ -38,6 +38,7 @@ def index(request):
 
 class BookListView(generic.ListView):
     model = Book
+    paginate_by = 3
 
 def book_detail_view(request, pk):
     book = get_object_or_404(Book, pk=pk)
